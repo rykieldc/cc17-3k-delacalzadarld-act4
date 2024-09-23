@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7D7C1"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="@string/tip_calculator"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="488dp" />
+
+    <!-- SERVICE COST   -->
+    <ImageView
+        android:id="@+id/icon_service_cost"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="19dp"
+        android:contentDescription="@string/ic_cost_of_service"
+        android:src="@drawable/ic_cost_of_service"
+        app:layout_constraintEnd_toStartOf="@+id/label_service_cost"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_title" />
+
+    <TextView
+        android:id="@+id/label_service_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/label_service_cost"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_title"/>
+
+    <EditText
+        android:id="@+id/input_service_cost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/accentColor"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="@string/hint_service_cost"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="@color/textColor"
+        android:textColorHint="#FC735751"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_service_cost"
+        app:layout_constraintWidth_max="320dp" />
+
+    <!-- SERVICE RATING  -->
+    <ImageView
+        android:id="@+id/icon_service_quality"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="175dp"
+        android:contentDescription="@string/ic_service_quality"
+        android:src="@drawable/ic_rate"
+        app:layout_constraintEnd_toStartOf="@+id/label_service_quality"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_service_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/label_service_quality"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_service_cost" />
+
+    <RadioGroup
+        android:id="@+id/options_service_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:checkedButton="@id/option_good"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_service_quality">
+
+        <RadioButton
+            android:id="@+id/option_amazing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accentColor"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:text="@string/option_service_amazing"
+            android:textColor="@color/textColor" />
+
+        <RadioButton
+            android:id="@+id/option_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accentColor"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:text="@string/option_service_good"
+            android:textColor="@color/textColor" />
+
+        <RadioButton
+            android:id="@+id/option_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accentColor"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:text="@string/option_service_ok"
+            android:textColor="@color/textColor" />
+    </RadioGroup>
+
+    <!-- ROUND UP TIP  -->
+    <ImageView
+        android:id="@+id/icon_round_up"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="353dp"
+        android:contentDescription="@string/ic_roundup"
+        android:src="@drawable/ic_decimal"
+        app:layout_constraintEnd_toStartOf="@+id/label_service_quality"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_service_cost"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_round_tip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:checked="true"
+        android:fontFamily="@font/poppins_semibold"
+        android:minHeight="48dp"
+        android:text="@string/label_round_tip"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:theme="@style/tipSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/options_service_quality"
+        app:layout_constraintWidth_max="320dp"/>
+
+    <!-- CALCULATE TIP -->
+    <Button
+        android:id="@+id/button_calculate_tip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/button"
+        android:text="@string/button_calculate_tip"
+        android:textColor="#FFF3E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_round_tip"
+        app:layout_constraintWidth_max="320dp"/>
+
+    <!-- FINAL TIP -->
+    <TextView
+        android:id="@+id/output_final_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_calculate_tip"
+        tools:text="@string/label_tip_amount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
